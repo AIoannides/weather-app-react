@@ -1,0 +1,60 @@
+.float-left {
+  float: left;
+}
+
+.main-weather .buttons {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  cursor: default;
+  color: #fff;
+}
+.main-weather .active {
+  color: #fff;
+  cursor: default;
+}
+
+#actualTemp {
+  color: #fff;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+#weatherIcon {
+  margin-right: 5px;
+  height: 65px;
+  width: 65px;
+}
+
+.temperature {
+  display: inline-block;
+  min-width: 55px;
+}
+
+#current-date {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+#weather-card {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  opacity: 0.6;
+  color: #fff;
+  font-weight: bolder;
+}
+
+#weather-description {
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+
+.js-toggle-unit {
+  text-decoration: none;
+  margin-right: 8px;
+  color: #fff;
+}
+
+.js-toggle-unit:hover {
+  color: #0a58ca;
+}
