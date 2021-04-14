@@ -2,6 +2,7 @@ import React from "react";
 import SearchForm from "./SearchForm";
 import WeatherCard from "./WeatherCard";
 import ForeCastCard from "./ForeCastCard";
+import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
@@ -21,11 +22,13 @@ export default function App() {
                 <div className="row mt-5">
                   <div className="col-md-12">
                     <WeatherCard
-                      city="London"
+                      city="Paris"
                       date="Wednesday 14 April"
                       temperature={20}
                       humidity={90}
                       wind={5}
+                      description="Clear
+                      Sky"
                     />
                   </div>
                 </div>
@@ -39,18 +42,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <footer>
-        <small>
-          <a
-            href="https://github.com/AIoannides/my-weather-app"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open-source code
-          </a>
-          by A.A.Ioannides
-        </small>
-      </footer>
+      <Footer />
     </div>
   );
 }

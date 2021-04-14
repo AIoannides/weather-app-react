@@ -1,6 +1,19 @@
+import React, { useState } from "react";
 import "./WeatherCard.css";
 
 export default function WeatherCard(props) {
+  let [city, setCity] = useState("props.city");
+  let [temperature, setTemperature] = useState(props.temperature);
+
+  function farheneit(event) {
+    event.preventDefault();
+    setTemperature(Math.round((props.temperature * 9) / 5 + 32));
+  }
+  function celsius(event) {
+    event.preventDefault();
+    setTemperature(props.temperature);
+  }
+
   return (
     <div className="card weather-card">
       <div className="card-body border border-5 rounded">
@@ -11,21 +24,25 @@ export default function WeatherCard(props) {
             <div className="creafix main-weather">
               <span className="float-left weatherIcon"></span>
               <div className="float-left">
-                <span classNames="temperature celsius actualTemp">
-                  {props.temperature}°C
+                <span className="temperature celsius actualTemp">
+                  {props.temperature}
                 </span>
                 <span className="buttons">
-                  <input
-                    type="button"
-                    value="°C"
+                  <a
+                    href="/"
+                    onClick={celsius}
                     className="js-toggle-unit js-celsius active"
-                  />
-                  |
-                  <input
-                    type="button"
-                    value="°F"
+                  >
+                    °C
+                  </a>{" "}
+                  |{" "}
+                  <a
+                    href="/"
+                    onClick={farheneit}
                     className="js-toggle-unit js-fahrenheit"
-                  />
+                  >
+                    °F
+                  </a>{" "}
                 </span>
               </div>
             </div>
@@ -47,7 +64,7 @@ export default function WeatherCard(props) {
               </div>
             </div>
           </div>
-          <p className="card-text weather-description">Clear Sky</p>
+          <p className="card-text weather-description">{props.description}</p>
         </div>
       </div>
     </div>

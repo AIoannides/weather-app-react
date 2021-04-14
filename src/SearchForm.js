@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function SearchForm() {
-  const [city, setCity] = useState("");
-  const [temperature, setTemperature] = useState("");
+export default function SearchForm(props) {
+  let [city, setCity] = useState("");
+  let [temperature, setTemperature] = useState(props.temperature);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -48,17 +48,16 @@ export default function SearchForm() {
             type="submit"
             value="submit"
           >
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </button>
           <button
             className="btn btn-outline-secondary pin-button"
             type="button"
           >
-            <i class="fas fa-map-pin"></i>
+            <i className="fas fa-map-pin"></i>
           </button>
         </div>
       </form>
-      <div>{temperature}</div>
     </div>
   );
 }
