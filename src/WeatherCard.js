@@ -1,25 +1,31 @@
 import "./WeatherCard.css";
 
-export default function SearchForm() {
+export default function WeatherCard(props) {
   return (
     <div className="card weather-card">
       <div className="card-body border border-5 rounded">
-        <p className="card-text display-5 cities"></p>
-        <p className="card-text current-date"></p>
+        <p className="card-text display-5 cities">{props.city}</p>
+        <p className="card-text current-date">{props.date}</p>
         <div className="row">
           <div className="col-md-6">
             <div className="creafix main-weather">
               <span className="float-left weatherIcon"></span>
               <div className="float-left">
-                <span classNames="temperature celsius actualTemp">20</span>
+                <span classNames="temperature celsius actualTemp">
+                  {props.temperature}°C
+                </span>
                 <span className="buttons">
-                  <a type="button" className="js-toggle-unit js-celsius active">
-                    °C
-                  </a>
+                  <input
+                    type="button"
+                    value="°C"
+                    className="js-toggle-unit js-celsius active"
+                  />
                   |
-                  <a type="button" className="js-toggle-unit js-fahrenheit">
-                    °F
-                  </a>
+                  <input
+                    type="button"
+                    value="°F"
+                    className="js-toggle-unit js-fahrenheit"
+                  />
                 </span>
               </div>
             </div>
@@ -33,11 +39,11 @@ export default function SearchForm() {
               </div>
               <div>
                 Wind:
-                <span className="wind-speed">2</span>
+                <span className="wind-speed">{props.wind}</span>
               </div>
               <div>
                 Humidity:
-                <span className="humidity">80%</span>
+                <span className="humidity">{props.humidity}%</span>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React from "react";
 import SearchForm from "./SearchForm";
 import WeatherCard from "./WeatherCard";
 import ForeCastCard from "./ForeCastCard";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 export default function App() {
@@ -19,7 +20,13 @@ export default function App() {
                 </div>
                 <div className="row mt-5">
                   <div className="col-md-12">
-                    <WeatherCard />
+                    <WeatherCard
+                      city="London"
+                      date="Wednesday 14 April"
+                      temperature={20}
+                      humidity={90}
+                      wind={5}
+                    />
                   </div>
                 </div>
                 <div className="row mt-5">

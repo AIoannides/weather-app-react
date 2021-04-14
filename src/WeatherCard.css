@@ -14,14 +14,14 @@
   cursor: default;
 }
 
-#actualTemp {
+.actualTemp {
   color: #fff;
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
 }
 
-#weatherIcon {
+.weatherIcon {
   margin-right: 5px;
   height: 65px;
   width: 65px;
@@ -32,19 +32,19 @@
   min-width: 55px;
 }
 
-#current-date {
+.current-date {
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-#weather-card {
+.weather-card {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   opacity: 0.6;
   color: #fff;
   font-weight: bolder;
 }
 
-#weather-description {
+.weather-description {
   text-transform: capitalize;
   margin-top: 30px;
 }
